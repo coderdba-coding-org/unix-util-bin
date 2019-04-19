@@ -1,0 +1,15 @@
+if [ $# -lt 1 ]
+then
+
+
+echo
+echo Usage: $0 IP_or_hostname
+echo
+
+exit
+
+fi
+
+host=$1
+
+ssh -o StrictHostKeyChecking=no cloud-user@$host
